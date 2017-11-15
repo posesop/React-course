@@ -1,0 +1,20 @@
+[
+  {
+    "id": 40,
+    "name": "Pablo Escobar",
+    "age": 44,
+    "avatarUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/d4/d4adf0a7594c75fd949f676a9eec1ab24c909b7c_full.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Bob Esponja",
+    "age": 10,
+    "avatarUrl": "http://www.mundobobesponja.com/imagenes/secciones/juegos/juegos_online_portada.png"
+  },
+  {
+    "id": 42,
+    "name": "Rick Sanchez",
+    "age": 65,
+    "avatarUrl": "https://avatarfiles.alphacoders.com/827/82704.png"
+  }
+]
