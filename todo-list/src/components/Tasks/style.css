@@ -1,0 +1,54 @@
+.task-item--low {
+  background-color:  lightgreen;
+}
+
+.task-item--medium {
+  background-color:  lightyellow;
+}
+
+.task-item--high {
+  background-color:  lightcoral;
+}
+
+.task-item__btn {
+  background-color: rgb(230, 108, 8) !important;
+}
+
+/* Transition */
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 800ms ease-in;
+}
+
+
+/**--- example styles ---**/
+.container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 200px;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.todo-list > * {
+  margin: 5px 0;
+  padding: 5px 0;
+  border-bottom:  1px solid #ccc;
+}
+
+.container > button {
+  margin-top: 20px;
+}

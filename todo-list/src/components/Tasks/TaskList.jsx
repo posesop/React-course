@@ -1,17 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TaskItem from './TaskItem'
+import TaskItem from './TaskItem';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const TaskList = ({ tasks }) => (
-  <ul className="task-list">
+  <TransitionGroup component="ul" className="task-list">
     {
-      tasks.map(task => {
-        <li key={task.id}>
+      tasks.map(task => 
+        <CSSTransition key={task.id} timeout={1000} classNames="fade" >
+        <li >
           <TaskItem { ...task } />
         </li>
-      })
+        </CSSTransition>
+      )
     }
-  </ul>
+  </TransitionGroup>
 );
 
 TaskList.propTypes = {

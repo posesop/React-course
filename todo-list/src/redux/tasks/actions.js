@@ -10,9 +10,14 @@ import {
   REDUX SIDE EFFECTS: redux-thunk
 */
 
+let i = 3;
+
 export const addTask = (task) => ({
   type: ADD_TASK,
-  payload: task,
+  payload: {
+    id: i++,
+      ...task
+  },
 });
 
 export const removeTask = (taskId) => ({

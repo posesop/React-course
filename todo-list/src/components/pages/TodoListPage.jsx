@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import TaskList from '../Tasks/TaskList';
-import TaskForm from '../Tasks/TaskForm';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+
+import TaskList from '../Tasks/TaskList';
+import TaskForm from '../Tasks/TaskForm';
 
 class TodoListPage extends Component {
   render() {
@@ -20,8 +21,8 @@ TodoListPage.propTypes = {
   tasks: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
-const mapStateToProps = ({ tasks }) => {
+const mapStateToProps = ({ tasks }) => ({
   tasks: tasks.list
-};
+});
 
 export default connect(mapStateToProps, null)(TodoListPage);
