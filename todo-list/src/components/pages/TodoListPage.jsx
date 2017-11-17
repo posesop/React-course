@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+import { getTasks } from 'redux/entities/reducer';
+
 import TaskList from '../Tasks/TaskList';
 import TaskForm from '../Tasks/TaskForm';
 
@@ -21,8 +23,8 @@ TodoListPage.propTypes = {
   tasks: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
-const mapStateToProps = ({ tasks }) => ({
-  tasks: tasks.list
+const mapStateToProps = (state) => ({
+  tasks: getTasks(state)
 });
 
 export default connect(mapStateToProps, null)(TodoListPage);

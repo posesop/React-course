@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
-import { removeTask } from "redux/tasks/actions";
+import { removeTask } from "redux/entities/actions";
 
 import { connect } from 'react-redux';
 

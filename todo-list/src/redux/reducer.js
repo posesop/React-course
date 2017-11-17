@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux'
-import tasksReducer from './tasks/reducer';
+import entitiesReducer from './entities/reducer';
 
 export default combineReducers({
-  tasks: tasksReducer,
+  entities: entitiesReducer,
   router: routerReducer,
 })

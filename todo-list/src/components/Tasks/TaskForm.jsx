@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { addTask } from "redux/tasks/actions";
+import { addTask } from "redux/entities/actions";
 
 class TaskForm extends Component {
 
