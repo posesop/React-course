@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
 import { removeTask } from "redux/entities/actions";
+import { NavLink } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 
@@ -14,8 +15,10 @@ const priorityClassName = [
 
 const TaskItem = ({ id, name, priority, owner, removeTask }) => (
   <div className={`task-item ${priorityClassName[priority]}`}>
-    <div>{id} - {name} <span>({priority})</span></div>
-    <div>{owner}</div>
+    <NavLink to={`/tasks/${id}`}>
+      <div>{id} - {name} <span>({priority})</span></div>
+      <div>{owner}</div>
+    </NavLink>
     <button onClick={() => removeTask(id)} className="task-item__btn">💣</button>
   </div>
 )

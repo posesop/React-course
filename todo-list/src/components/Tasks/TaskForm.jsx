@@ -12,7 +12,7 @@ class TaskForm extends Component {
   }
 
   refFn = (node) => {
-    this.formNodes[node.name] = node;
+    if (node) this.formNodes[node.name] = node;
   }
 
   clearForm = () => {
