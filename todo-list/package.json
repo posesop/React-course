@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "history": "^4.7.2",
+    "keycode": "^2.1.9",
     "normalizr": "^3.2.4",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
