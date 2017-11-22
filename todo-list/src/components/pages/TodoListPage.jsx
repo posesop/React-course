@@ -6,13 +6,16 @@ import { getTasks } from 'redux/entities/reducer';
 
 import TaskList from '../Tasks/TaskList';
 import TaskForm from '../Tasks/TaskForm';
+import TaskItem from '../Tasks/TaskItem';
 
 class TodoListPage extends Component {
   render() {
     return (
       <div className='app'>
         <h1>TODO LIST app</h1>
-        <TaskList tasks={this.props.tasks} />
+        <TaskList>
+          {this.props.tasks.map(task => <TaskItem key={task.id} {...task} />)}
+        </TaskList>
         <TaskForm />
       </div>
     );
@@ -28,3 +31,4 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, null)(TodoListPage);
+export { TodoListPage };

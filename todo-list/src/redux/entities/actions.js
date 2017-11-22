@@ -13,7 +13,7 @@ import {
 let taskId = 3;
 
 export const addTask = (task) => {
-  const id = taskId++;
+  const id = ('id' in task) ? task.id : taskId++;
   return {
     type: MERGE_ENTITIES,
     entityId: id,
